@@ -29,6 +29,7 @@ We have separate folders for the samples of individual modules:
 * `projections` - A sample REST web-service showing how to use projections.
 * `security` - A sample REST web-service secured using Spring Security.
 * `headers` - A sample showing the population of HTTP headers and the usage of them to perform conditional `GET` requests.
+* `querydsl` - A sample REST web-service transforming query string parameters into QueryDSL Predicates built upon Spring Data REST and MongoDB.
 
 ## Spring Data Redis
 
