@@ -134,12 +134,10 @@ public class SecurityIntegrationTests {
 
 		SecurityContextHolder.getContext().setAuthentication(adminAuth);
 
-		// Detaching items to get them out of the query cache in order to see the updated values.
-		em.detach(object1);
-		em.detach(object2);
-		em.detach(object3);
-
 		secureBusinessObjectRepository.modifiyDataWithRecordingSecurityContext();
+
+		// Clearing the EntityManager to get them out of the query cache in order to see the updated values.
+		em.clear();
 
 		for (BusinessObject bo : businessObjectRepository.findAll()) {
 
