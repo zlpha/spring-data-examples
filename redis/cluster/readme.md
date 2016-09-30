@@ -86,3 +86,13 @@ To shutdown the cluster use the `create-cluster stop` command.
 ```bash
 redis/utils/create-cluster $ ./create-cluster stop
 ```
+
+## AWS Test ##
+```bash
+#install jdk
+#install maven
+#install ruby
+sudo yum install ruby
+gem install redis
+mvn -am -pl redis/cluster test -DfailIfNoTests=false -Dtest=example.springdata.redis.cluster.BasicUsageTests#singleSlotOperation
+```
